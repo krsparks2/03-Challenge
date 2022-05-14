@@ -18,9 +18,25 @@ function passwordFormat()
   console.log(passwordNumbers);
   if (passwordLength > 8 && passwordLength < 128)
   {
-    console.log(passwordLength);
+    console.log("Blue");
+    if (passwordCase === true)
+    {
+      console.log("Yellow");
+      if (passwordSymbols === true)
+      {
+        console.log("Red");
+        if (passwordNumbers === true)
+        {
+          console.log("Purple")
+        }
+      }
+    }
+    else
+    {
+      console.log("Boo")
+    }
   }
-  // for (let i = 0; i < passwordLength; i++) 
+  // for (i = 0; i < passwordLength; i++) 
   // {
   //     Math.floor(Math.random() * passwordLength);
   // }
