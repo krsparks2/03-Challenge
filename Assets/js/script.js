@@ -6,9 +6,9 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var symbols = "`~!@#$%^&*()_-+={}|[]\:;'<,>.?/";
 var numbers = "0123456789";
 
-function passwordSize()
+function passwordFormat()
 {
-  var passwordLength = prompt("Enter Password Length", "8-128 characters");
+  var passwordLength = prompt("Enter Password Length", "");
   var passwordCase = confirm("Use upper and lower case letters?");
   var passwordSymbols = confirm("Use special characters?");
   var passwordNumbers = confirm("Use numbers?");  
@@ -16,34 +16,32 @@ function passwordSize()
   console.log(passwordCase); 
   console.log(passwordSymbols); 
   console.log(passwordNumbers);
+  if (passwordLength > 8 && passwordLength < 128)
+  {
+    console.log(passwordLength);
+  }
+  // for (let i = 0; i < passwordLength; i++) 
+  // {
+  //     Math.floor(Math.random() * passwordLength);
+  // }
 }	
-
-
-// function passwordSize() {
-//   passwordLength = prompt("Enter Password Length", "8-128 characters");
-//   return passwordLength;
-// }
-
-
-
-
-// var chars ="lkajsgfdbnx"
-// var charsArr = chars.split('');
-// console.log(charsArr);
 
 
 
 // Write password to the #password input
 //funtion generatePassword(){console.log("click to generate password") return generatedpassword;};
 
-  function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-   passwordText.value = password;
+//   passwordText.value = password;
 
- }
+// }
+  
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//generateBtn.addEventListener("click", writePassword){
+
+//};
 
